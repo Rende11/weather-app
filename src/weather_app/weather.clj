@@ -13,12 +13,12 @@
                   :units "metric"}
                  :as :json})
     (catch Exception e
-         (throw (ex-info (ex-message e)
-                         {:message "Weather search failed"
-                          :data {:city city}}
-                         e)))))
+      (throw (ex-info (ex-message e)
+                      {:message "Weather search failed"
+                       :data {:city city}}
+                      e)))))
 
 (defn get-weather [params]
   (let [resp (weather-req params)]
-    {:city (-> resp :body :name)
+    {:city        (-> resp :body :name)
      :temperature (-> resp :body :main :temp)}))
