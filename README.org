@@ -1,5 +1,5 @@
 * Weather app
-It is a small web application which provide simple API for requesting current weather and stores these requests into database. Weather data are collects from `openweathermap.org`.
+It is a small web application which provide simple API for requesting current weather and stores these requests into database. Weather data are collects from ~openweathermap.org~.
 
 ** API
 Only one endpoint is available:
@@ -22,8 +22,8 @@ Response example:
 #+END_SRC
 ** Configuration (important)!!!
 Before the run you need to configure the app. App gets parameters via environment variables.
-All parameters have default values except - api key for access to `openweathermap.org`.
-Please open `.env` file and set it. Also you can update some other options if it necessary.
+All parameters have default values except - api key for access to ~openweathermap.org~.
+Please open ~.env~ file and set it. Also you can update some other options if it necessary.
 ** How to run
 After configuration you are ready to launch app locally.
 
@@ -37,9 +37,9 @@ When database launched, run app:
 make run
 #+END_SRC
 
-When you see `Server is launching on port` - congratulations! App is running :)
+When you see ~Server is launching on port~ - congratulations! App is running :)
 ** Useful commands
-Some another commands from `Makefile`
+Some another commands from ~Makefile~
 
 For stopping database:
 #+BEGIN_SRC
