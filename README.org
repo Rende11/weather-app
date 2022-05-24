@@ -1,9 +1,73 @@
-* Checklist
- - [ ] Run app
- - [ ] Clean up code
- - [ ] Add readme instructions
- - [ ] Add tests
- - [ ] Add honeysql
- - [ ] Add config
- - [ ] Fix and add logs
- - [ ] Error handling
+* Weather app
+It is a small web application which provide simple API for requesting current weather and stores these requests into database. Weather data are collects from `openweathermap.org`.
+
+** API
+Only one endpoint is available:
+#+BEGIN_SRC
+<host>/weather/{city}
+#+END_SRC
+
+Request example:
+#+BEGIN_SRC
+localhost:9999/weather/Paris
+#+END_SRC
+
+Response example:
+#+BEGIN_SRC
+{
+  "city" : "Paris",
+  "temperature" : 13.81,
+  "datetime" : "2022-05-24T20:29:02Z"
+}
+#+END_SRC
+** Configuration (important)!!!
+Before the run you need to configure the app. App gets parameters via environment variables.
+All parameters have default values except - api key for access to `openweathermap.org`.
+Please open `.env` file and set it. Also you can update some other options if it necessary.
+** How to run
+After configuration you are ready to launch app locally.
+
+Launch database:
+#+BEGIN_SRC
+make up
+#+END_SRC
+
+When database launched, run app:
+#+BEGIN_SRC
+make run
+#+END_SRC
+
+When you see `Server is launching on port` - congratulations! App is running :)
+** Useful commands
+Some another commands from `Makefile`
+
+For stopping database:
+#+BEGIN_SRC
+make down
+#+END_SRC
+
+For launching dev repl:
+#+BEGIN_SRC
+make repl
+#+END_SRC
+
+For accessing to database via psql:
+#+BEGIN_SRC
+make psql
+#+END_SRC
+** Used tools, libs and keywords
+- Clojure
+- Postgres 14
+- Ring
+- Integrant
+- Reitit
+- JDBC
+- Hikari-CP
+- deps.edn
+- Makefile
+** Missing points
+- [ ] Configuration
+- [ ] Logging
+- [ ] Test
+- [ ] SQL library
+- [ ] Better error handling
