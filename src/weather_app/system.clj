@@ -1,6 +1,5 @@
 (ns weather-app.system
-  (:require [clojure.java.jdbc :as jdbc]
-            [hikari-cp.core :as cp]
+  (:require [hikari-cp.core :as cp]
             [integrant.core :as ig]
             [ring.adapter.jetty :as jetty]
             [weather-app.handler :as handler]))

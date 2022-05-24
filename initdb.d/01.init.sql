@@ -1,7 +1,7 @@
 drop table if exists requests;
-create table requests (
+create table meteodata (
   id serial primary key,
   city text,
   temperature float,
-  created_at  timestamp default now()
+  datetime  timestamp default now()
 );
