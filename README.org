@@ -1,0 +1,9 @@
+* Checklist
+ - [ ] Run app
+ - [ ] Clean up code
+ - [ ] Add readme instructions
+ - [ ] Add tests
+ - [ ] Add honeysql
+ - [ ] Add config
+ - [ ] Fix and add logs
+ - [ ] Error handling

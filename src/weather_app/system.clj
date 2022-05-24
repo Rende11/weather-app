@@ -45,15 +45,10 @@
 (defn stop [sys]
   (ig/halt! sys))
 
+
 (comment
   (def system
     (start))
 
   (stop system)
-
-  (do
-    (stop system)
-    (def system
-      (start))
-    )
-  )
+)

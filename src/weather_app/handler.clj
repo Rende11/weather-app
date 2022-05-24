@@ -1,6 +1,5 @@
 (ns weather-app.handler
-  (:require [clojure.tools.logging :as log]
-            [reitit.ring :as r]
+  (:require [reitit.ring :as r]
             [ring.middleware.json :refer [wrap-json-response]]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
             [ring.middleware.params :refer [wrap-params]]

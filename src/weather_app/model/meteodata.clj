@@ -3,9 +3,9 @@
 
 (defn save [db meteo]
   (try
-    (jdbc/insert! db :meteodata meteo)
+    (first (jdbc/insert! db :meteodata meteo))
     (catch Exception e
       (throw (ex-info (ex-message e)
-                      {:message "Save request data error"
+                      {:message "Save meteodata error"
                        :data meteo}
                       e)))))

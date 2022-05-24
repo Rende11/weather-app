@@ -9,8 +9,7 @@
          metosin/reitit            {:mvn/version "0.5.18"}
          org.clojure/java.jdbc     {:mvn/version "0.7.12"}
          org.postgresql/postgresql {:mvn/version "42.3.5"}
-         hikari-cp/hikari-cp       {:mvn/version "2.14.0"}
-         org.clojure/tools.logging {:mvn/version "1.2.4"}}
+         hikari-cp/hikari-cp       {:mvn/version "2.14.0"}}
 
  :aliases {:repl
            {:extra-deps {cider/cider-nrepl {:mvn/version "0.28.3"}}
