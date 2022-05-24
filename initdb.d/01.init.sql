@@ -1,5 +1,4 @@
-drop table if exists requests;
-create table meteodata (
+create table if not exists meteodata (
   id serial primary key,
   city text,
   temperature float,
