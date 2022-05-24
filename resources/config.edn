@@ -1,0 +1,10 @@
+{:app/server  {:handler #ig/ref :app/handler
+               :port    #long #or [#env PORT 9999]}
+ :app/handler {:api-key #env API_KEY
+               :db      #ig/ref :app/db}
+ :app/db      {:adapter       "postgresql"
+               :database-name #env "POSTGRES_DB"
+               :server-name   #env "POSTGRES_HOST"
+               :username      #env "POSTGRES_USER"
+               :password      #env "POSTGRES_PASSWORD"
+               :port-number   #long #env "POSTGRES_PORT"}}
